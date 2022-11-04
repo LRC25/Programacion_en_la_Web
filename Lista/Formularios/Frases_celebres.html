@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html  lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Frases clebres de usuario</title>
+</head>
+<body>
+<h3>Frases célebres de usuario</h3>
+<form action="/cv/dataCV" method="post" enctype="multipart/form-data">
+
+
+<fieldset>
+
+ Nombre usuario <br/>
+
+ <input type="text" name="nombre" value="" size="15" maxlength="9" />
+ <br/>
+
+ Ingrese sus frases célebres y marque la frase principal principal <br>
+ <input type="radio" name="reason" value=""> <input type="text" name="other_reason" /><br>
+ <input type="radio" name="reason" value=""> <input type="text" name="other_reason" />
+
+ </fieldset>
+
+ <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" /> -->
+ <input type="button" value="Regresar al menú" onClick="history.go(-1);">
+ <input type="submit" name="enviar" value="Enviar correo" />
+
+</form>
+</body>
+</html>

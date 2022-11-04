@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html  lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Rellena tu CV</title>
+</head>
+<body>
+<h3>Rellena tu CV</h3>
+<form action="/cv/dataCV" method="post" enctype="multipart/form-data">
+Nombre <br/>
+<input type="text" name="nombre" value="" size="20" maxlength="30" />
+<br/>
+Apellidos <br/>
+<input type="text" name="apellidos" value="" size="50" maxlength="80" />
+<br/>
+Contraseña <br/>
+<input type="password" name="contrasena" value="" maxlength="10" />
+<br/>
+Identificación <br/>
+<select name="select">
+ <option value="CC">CC</option> 
+ <option value="TI" selected>TI</option>
+ <option value="CE">CE</option>
+ <option value="RC">RC</option>
+</select>
+<input type="text" name="numero" value="" size="10" maxlength="9" />
+<br/>
+Sexo <br/>
+<input type="radio" name="sexo" value="hombre" checked="checked" /> Hombre 
+<br/>
+<input type="radio" name="sexo" value="mujer" /> Mujer
+<br/>Incluir mi foto<br/>
+<input type="file" name="foto" />
+<br/><br/>
+<input name="verificacion_estudiante" type="checkbox" value="estudiante" checked="checked"/> 
+Estudiante....
+<br/><br/>
+
+<fieldset width: 10%>
+<legend>Datos personales</legend>
+Departamento<br/>
+
+<select name=" - select - ">
+    <option value="value2" selected> - selecciona -</option>
+    <option value="value1">Santander</option>
+    <option value="value3">Value 3</option>
+</select>
+
+
+  <br/><br/>
+ Fecha de nacimiento <br/>
+ <input type="text" name="dia" value="" size="4" maxlength="9"/>
+ de
+ <select name="meses">
+    <option value="value2" selected> Enero</option>
+    <option value="value1">Febrero</option>
+    <option value="value3">Marzo</option>
+    <option value="value4">Abril</option>
+    <option value="value5">Mayo</option>
+    <option value="value6">Junio</option>
+    <option value="value7">Julio</option>
+    <option value="value8">Agosto</option>
+    <option value="value9">Septiembre</option>
+    <option value="value10">Octubre</option>
+    <option value="value11">Noviembre</option>
+    <option value="value12">Diciembre</option>
+</select>
+de
+<input type="text" name="year" value="" size="5" maxlength="9"/>
+ <br/><br/>
+ Temas de interés <br/>
+ 
+<select multiple>
+    <option value="value2" > Administración de bases de datos </option>
+    <option value="value1">Análisis y programación</option>
+    <option value="value3">Arquitectura</option>
+    <option value="value3">Calidad</option>
+    <option value="value3">ERP, CRM, Business Intelligence</option>
+</select>
+
+ 
+
+ <br/>
+
+ </fieldset>
+ <input type="submit" name="enviar" value="Guardar cambios" />
+<input type="reset" name="limpiar" value="Borrar los datos introducidos" />
+</form>
+</body>
+</html>

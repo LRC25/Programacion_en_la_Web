@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inscripcion de coche</title> 
+<link href="stylemh.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <p></p>
+    <section class="form"> 
+        <h4>Registro de Coche</h4>
+        <form action="/cv/dataCV" method="post" enctype="multipart/form-data">
+        
+        
+        <fieldset class=fieldset>
+        <legend><h3>Datos del coche</h3></legend>
+        
+        
+        
+        <h2>Tipo Coche</h2>
+        <input class = "blankspace" type="text" name="tipocoche" value="" size="20" maxlength="30" />
+        <br/>
+        
+        
+        <h2>Estado</h2> 
+        <label><select class="select" name=" - select - ">
+            <option value="value1" selected> - selecciona -</option>
+            <option value="value2">0 Kilometros</option>
+            <option value="value3">Buen estado</option>
+            <option value="value4">Poco uso</option>
+            <option value="value5">Gran cantidad de reparaciones</option>
+            <option value="value6">Mucho uso</option>
+            <option value="value7">Deteriorado</option>
+        </select></label>
+        <br/>
+        
+        
+        <h2>Marca</h2> 
+        <input class = "blankspace" type="text" name="marca" value="" size="50" maxlength="80" />
+        <br/>
+        
+       
+        <h2>Usuario del Coche</h2>
+        <input class = "blankspace"  type="text" name="usrcoche" value="" size="50" maxlength="80" />
+        <br/>
+        
+        <h2>Modelo</h2>
+        <input class = "blankspace" type="text" name="modelo" value="" size="50" maxlength="80" />
+        <br/>
+        
+        <h2>Anio</h2> 
+        <input class = "blankspace" type="integer" name="año" value="" maxlength="10" />
+        <br/>
+        
+        <h2>Detalles</h2> 
+        <input class = "blankspace" type="text" name="Detalles" value="" size="50" maxlength="80" />
+        <br/>
+        
+        <h2>Caja</h2>  
+        <label><select class="select" name=" - select - ">
+            <option value="value1" selected> - selecciona -</option>
+            <option value="value2">Automatica</option>
+            <option value="value3">Mecanica</option>
+            <option value="value4">Electrico</option>
+        </select></label>
+        <br/>
+
+        <h2>Motor</h2> 
+        <input class = "blankspace" type="text" name="motor" value="" size="50" maxlength="80" />
+        <br/>
+
+        <h2>Fecha Publicacion</h2> 
+        <input class = "blankspace" type="date" name="fecha pub" value="" size="50" maxlength="80" />
+        <br/>
+
+        <h2>Precio</h2> 
+        <input class = "blankspace" type="text" name="precio" value="" size="50" maxlength="80" />
+        <br/>
+
+        <h2>Moneda</h2> 
+        <input class = "blankspace" type="text" name="moneda" value="" size="50" maxlength="80" />
+        <br/>
+
+        <br/>
+        
+         </fieldset>
+         <br/>
+        
+        
+         <input class = "buttons" type="submit" name="enviar" value="Registrar" />  <br/>
+        <input class = "buttons" type="reset" name="limpiar" value="Borrar los datos introducidos" />
+        
+        </form>
+        </section>
+</body>
+</html>

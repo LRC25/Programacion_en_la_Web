@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html  lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Registro de Usuario</title>
+<link href="style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<section class="form"> 
+<h4>Registro de Usuario</h4>
+<form action="/cv/dataCV" method="post" enctype="multipart/form-data">
+
+
+<fieldset class=fieldset>
+<legend><h3>  Datos personales</h3></legend>
+
+<!-- País -->
+
+<h2>País</h2>
+
+<label><select class="select" name=" - select - ">
+    <option value="value1" selected> - selecciona -</option>
+    <option value="value2">Argentina</option>
+    <option value="value3">Alemania</option>
+    <option value="value4">Australia</option>
+    <option value="value5">Bolivia</option>
+    <option value="value6">Bélgica</option>
+    <option value="value7">Brasil</option>
+    <option value="value8">Canadá</option>
+    <option value="value9">Chile</option>
+    <option value="value10">China</option>
+    <option value="value11">Colombia</option>
+    <option value="value12">Ecuador</option>
+    <option value="value13">Francia</option>
+    <option value="value14">Finlandia</option>
+    <option value="value15">Italia</option>
+    <option value="value16">Japón</option>
+    <option value="value17">México</option>
+    <option value="value18">Perú</option>
+    <option value="value19">Portugal</option>
+    <option value="value20">Suecia</option>
+    <option value="value21">Suiza</option>
+    <option value="value22">Venezuela</option>
+</select></label>
+
+<!-- Nombre -->
+<h2>Nombre</h2> 
+<input class = "blankspace" type="text" name="nombre" value="" size="20" maxlength="30" />
+<br/>
+
+<!-- Apellido -->
+<h2>Apellido</h2> 
+<input class = "blankspace" type="text" name="apellidos" value="" size="50" maxlength="80" />
+<br/>
+
+<!-- Dirección -->
+<h2>Dirección</h2>
+<input class = "blankspace"  type="text" name="apellidos" value="" size="50" maxlength="80" />
+<br/>
+
+<!-- CCUsuario -->
+<h2>CCUsuario</h2>
+<input class = "blankspace" type="text" name="apellidos" value="" size="50" maxlength="80" />
+<br/>
+
+<!-- Contraseña -->
+<h2>Contraseña</h2> 
+<input class = "blankspace" type="password" name="contrasena" value="" maxlength="10" />
+<br/>
+
+<!-- Email -->
+<h2>Email</h2> 
+<input class = "blankspace" type="text" name="apellidos" value="" size="50" maxlength="80" />
+<br/>
+
+<!-- Teléfono -->
+<h2>Teléfono</h2>  
+<input class = "blankspace" type="text" name="apellidos" value="" size="20" maxlength="80" />
+<br/>
+
+ </fieldset>
+ <br/>
+
+<!-- Botones -->
+ <input class = "buttons" type="submit" name="enviar" value="Registrar" />  <br/>
+<input class = "buttons" type="reset" name="limpiar" value="Borrar los datos introducidos" />
+
+</form>
+</section>
+</body>
+</html>

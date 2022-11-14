@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html  lang="es">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Registro de Usuario</title>
+<link href="style1.css" type="text/css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+</head>
+
+<body>
+
+<!-- Formulario -->
+<section class="form"> 
+<h4> <i class="bi bi-person-circle"></i> Registro de Usuario</h4>
+<form action="/cv/dataCV" method="post" enctype="multipart/form-data">
+<fieldset class=fieldset>
+
+  <div class="h4 pb-2 mb-4 text-secundary border-bottom border-secundary">
+    Datos personales
+  </div>
+
+<!-- País -->
+<h2> <i class="bi bi-globe-central-south-asia"></i> País</h2>
+<label><select class="form-select" aria-label="- select- ">
+    <option selected> - selecciona - </option>
+    <option value="value1" selected> - selecciona -</option>
+    <option value="value2">Argentina</option>
+    <option value="value3">Alemania</option>
+    <option value="value4">Australia</option>
+    <option value="value5">Bolivia</option>
+    <option value="value6">Bélgica</option>
+    <option value="value7">Brasil</option>
+    <option value="value8">Canadá</option>
+    <option value="value9">Chile</option>
+    <option value="value10">China</option>
+    <option value="value11">Colombia</option>
+    <option value="value12">Ecuador</option>
+    <option value="value13">Francia</option>
+    <option value="value14">Finlandia</option>
+    <option value="value15">Italia</option>
+    <option value="value16">Japón</option>
+    <option value="value17">México</option>
+    <option value="value18">Perú</option>
+    <option value="value19">Portugal</option>
+    <option value="value20">Suecia</option>
+    <option value="value21">Suiza</option>
+    <option value="value22">Venezuela</option>
+</select></label>
+
+<!-- Nombre -->
+
+   <div class="mb-3">
+    <label for="formGroupExampleInput" class="form-label">Nombre</label>
+    <input type="text" class="form-control"  id="formGroupExampleInput" placeholder="Ingrese nombre">
+  </div>
+
+<!-- Apellido -->
+
+  <div class="mb-3">
+    <label for="formGroupExampleInput2" class="form-label">Apellido</label>
+    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Ingrese apellido">
+  </div>
+
+<!-- Dirección -->
+
+  <div class="mb-3">
+    <label for="formGroupExampleInput2" class="form-label"> <i class="bi bi-compass"></i> Dirección</label>
+    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Ingrese la dirección">
+  </div>
+
+<!-- CCUsuario -->
+
+  <div class="mb-3">
+    <label for="formGroupExampleInput2" class="form-label">CCUsuario</label>
+    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Ingrese número de cédula de ciudadanía">
+  </div>
+
+<!-- Contraseña -->
+
+<div class="mb-3">
+    <label for="formGroupExampleInput2" class="form-label">Contraseña</label>
+    <input type="password" class="form-control" placeholder="Contraseña" aria-label="Password" aria-describedby="basic-addon1">
+  </div>
+
+<!-- Email -->
+
+<h2> <i class="bi bi-envelope-at-fill"></i> Email </h2> 
+<div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">@</span>
+    <input type="text" class="form-control" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1">
+  </div>
+
+<!-- Teléfono -->
+
+  <div class="mb-3">
+    <label for="formGroupExampleInput2" class="form-label"><i class="bi bi-telephone-fill"></i> Teléfono</label>
+    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Ingrese número de teléfono">
+  </div>
+ </fieldset>
+
+<!-- Botones -->
+ 
+ <div class="d-grid gap-2">
+    <button class="btn btn-primary" type="submit" > <i class="bi bi-box-arrow-in-right"></i>  Registrar</button>
+    <input class="btn btn-secondary" type="reset" value="Borrar"> 
+  </div>
+
+</form>
+</section>
+</body>
+</html>

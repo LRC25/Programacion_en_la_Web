@@ -1,0 +1,54 @@
+* {
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+  
+  }
+  
+  .form {
+    width: 590px;
+    background: 
+    #880E4F
+   ; 
+    padding: 33px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 60px;
+    border-radius: 8px;
+    font-family: "calibri";
+    color:white;
+  }
+  
+  .form h4 {
+    font-size: 40px;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+  
+  .form h3 {
+    font-size: 32px;
+    margin-bottom: 2px;
+    text-align: center;
+    color: white;
+  }
+  
+  .form h2 { 
+      font-size: 18px;
+      
+  }
+  
+  body {
+    background: #a3eede;
+    background: -webkit-linear-gradient(to top,#5728d7, #a3eede, );
+    background: linear-gradient(to top, #5728d7, #a3eede);
+}
+  
+.fieldset{
+    border-radius: 8px;
+    font-family: "calibri";
+    color:white;
+    
+    
+  }
+ 

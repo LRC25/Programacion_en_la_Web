@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html  lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css"> 
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="style2.css" type="text/css" rel="stylesheet">
+<title>Registro de Usuario</title>
+</head>
+
+<body>
+
+<!-- Formulario -->
+<section class="form"> 
+<h4> <i class="medium material-icons">account_box</i> Registro de Usuario</h4>
+<form>
+
+<fieldset class=fieldset>
+    <div class="progress">
+        <div class="determinate" style="width: 70%"></div>
+    </div>
+<legend><h3> Datos personales</h3></legend>
+
+<!-- País -->
+<div class="input-field col s12">
+    <i class="material-icons prefix">public</i>
+    <select class="select"> 
+      <option value="" disabled selected> - selecciona - </option>
+      <option value="value1" selected> - selecciona -</option>
+      <option value="value2">Argentina</option>
+      <option value="value3">Alemania</option>
+      <option value="value4">Australia</option>
+      <option value="value5">Bolivia</option>
+      <option value="value6">Bélgica</option>
+      <option value="value7">Brasil</option>
+      <option value="value8">Canadá</option>
+      <option value="value9">Chile</option>
+      <option value="value10">China</option>
+      <option value="value11">Colombia</option>
+      <option value="value12">Ecuador</option>
+      <option value="value13">Francia</option>
+      <option value="value14">Finlandia</option>
+      <option value="value15">Italia</option>
+      <option value="value16">Japón</option>
+      <option value="value17">México</option>
+      <option value="value18">Perú</option>
+      <option value="value19">Portugal</option>
+      <option value="value20">Suecia</option>
+      <option value="value21">Suiza</option>
+      <option value="value22">Venezuela</option>
+    </select>
+    <label> <h6>País</h6></label>
+</div>
+
+<!-- Nombre -->
+
+<div class="input-field col s6">
+    <i class="material-icons prefix">account_circle</i>
+    <input id="icon_prefix" type="text" class="validate">
+    <label for="icon_prefix">Nombre</label>
+  </div>
+
+<!-- Apellido  -->
+
+  <div class="input-field col s6">
+    <i class="material-icons prefix">account_circle</i>
+    <input id="icon_prefix" type="text" class="validate">
+    <label for="icon_prefix">Apellido</label>
+  </div>
+
+<!-- Dirección -->
+
+  <div class="input-field col s6">
+    <i class="material-icons prefix">add_location</i>
+    <input id="icon_prefix" type="text" class="validate">
+    <label for="icon_prefix">Dirección</label>
+  </div>
+
+<!-- CCUsuario -->
+  <div class="input-field col s6">
+    <i class="material-icons prefix">fingerprint</i>
+    <input id="icon_prefix" type="text" class="validate">
+    <label for="icon_prefix">CCUsuario</label>
+  </div>
+
+<!-- Contraseña -->
+
+  <div class="input-field col s6">
+    <i class="material-icons prefix">keyboard</i>
+    <input id="icon_prefix" type="password" class="validate">
+    <label for="icon_prefix">Contraseña</label>
+  </div> 
+
+<!-- Email -->
+
+  <div class="input-field col s6">
+    <i class="material-icons prefix">contact_mail</i>
+    <input id="icon_prefix" type="text" class="validate">
+    <label for="icon_prefix">Email</label>
+  </div>
+
+<!-- Teléfono -->
+
+  <div class="input-field col s6">
+    <i class="material-icons prefix">contact_phone</i>
+    <input id="icon_prefix" type="text" class="validate">
+    <label for="icon_prefix">Teléfono</label>
+  </div>
+
+ </fieldset>
+ <br/>
+
+<!-- Botones -->
+
+ <button class="btn waves-effect waves-light btn-large" type="submit" name="action">Registrar
+    <i class="material-icons right">send</i>
+  </button>
+
+  <button class="btn waves-effect waves-light btn-large" type="reset" name="limpiar">Borrar
+    <i class="material-icons right">send</i>
+  </button>
+
+</form>
+</section>
+<!-- Compiled and minified JavaScript -->
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>      
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>  
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('select').formSelect();
+        
+    });
+    
+  
+  </script>
+
+</body>
+</html>

@@ -105,7 +105,7 @@
 
   <div class="input-field col s6">
     <i class="material-icons prefix">keyboard</i>
-    <input id="password" type="password" name="password" class="validate">
+    <input id="password" type="password" name="password" class="validate" >
     <i class="material-icons prefix" id="incorrect5">cancel</i>
     <i class="material-icons prefix cancel" id="b5">check_circle</i>
     <label for="password">Contraseña</label>
@@ -115,12 +115,15 @@
 
   <div id="grupo_confirmar_contraseña" class="input-field col s6">
     <i class="material-icons prefix">keyboard</i>
-    <input id="passwordv" type="password" name="password2" class="validate">
+    <input id="passwordv" type="password" name="password2" class="validate" onblur="verificar_pass()"
+            onkeyup="verificar_pass()">
     <i class="material-icons prefix" id="incorrect6">cancel</i>
     <i class="material-icons prefix cancel" id="b6">check_circle</i>
     <label for="password">Confirmar Contraseña</label>
+    <h6 id="m8">Las contraseñas no coinciden</h6>
   </div> 
   <h6 id="h6">debe llenar este campo</h6>
+  
 
 <!-- Email -->
 
@@ -130,6 +133,8 @@
     <i class="material-icons prefix" id="incorrect7">cancel</i>
     <i class="material-icons prefix cancel" id="b7">check_circle</i>
     <label for="email">Email</label>
+    <h6 id="m9">No es un correo valido</h6>
+    
   </div>
 
 <!-- Teléfono -->
@@ -145,7 +150,133 @@
 
  </fieldset>
  <br/>
+<!--Gustos-->
+     <div class="control">
+        <h3 class="subtitle">Registro de gustos (opcional)</h3>
+        <div id="color">
+        <b>Color</b><br>
+        <label class="radio">
+          <input type="radio" name="color"/>
+          Blanco
+        </label>
+        <label class="radio">
+          <input type="radio" name="color"/>
+          Negro
+        </label>
+        <label class="radio">
+          <input type="radio" name="color"/>
+          Plata
+        </label>
+        <label class="radio">
+          <input type="radio" name="color"/>
+          Azul
+        </label>
+        <label class="radio">
+          <input type="radio" name="color"/>
+          Rojo
+        </label>
+        <label class="radio">
+          <input type="radio" name="color"/>
+          Verde
+        </label>
+        <label class="radio">
+          <input type="radio" name="color"/>
+          Amarillo
+        </label>
+        <label class="radio">
+          <input type="radio" name="color"/>
+          Marron/Beige
+        </label>      
+      </div>  <br>
+      <div id="marca">
+        <b>Marca</b><br>
+        <label class="radio">
+          <input type="radio" name="marca"/>
+          Chevrolet
+        </label>
+        <label class="radio">
+          <input type="radio" name="marca"/>
+          Susuki
+        </label>
+        <label class="radio">
+          <input type="radio" name="marca"/>
+          Kia
+        </label>
+        <label class="radio">
+          <input type="radio" name="marca"/>
+          Renault
+        </label>
+      </div><br>
+      <div id="estilo">
+        <b>Estilo</b><br>
+        <label class="radio">
+          <input type="radio" name="estilo"/>
+          Cupe
+        </label>
+        <label class="radio">
+          <input type="radio" name="estilo"/>
+          Hatchback
+        </label>
+        <label class="radio">
+          <input type="radio" name="estilo"/>
+          Descapotable
+        </label>
+        <label class="radio">
+          <input type="radio" name="estilo"/>
+          Roadster
+        </label>
+        <label class="radio">
+          <input type="radio" name="estilo"/>
+          Todoterreno
+        </label>
+        <label class="radio">
+          <input type="radio" name="estilo"/>
+          Familiar
+        </label>
+      </div><br>
+      <div id="modelo">
+        <b>Modelo</b><br>
+        <label class="radio">
+          <input type="radio" name="modelo"/>
+          Onix
+        </label>
+        <label class="radio">
+          <input type="radio" name="modelo"/>
+          Duster
+        </label>
+        <label class="radio">
+          <input type="radio" name="modelo"/>
+          Stepway
+        </label>
+        <label class="radio">
+          <input type="radio" name="modelo"/>
+          Picanto
+        </label>
+        <label class="radio">
+          <input type="radio" name="modelo"/>
+          CX-30
+        </label>
+        <label class="radio">
+          <input type="radio" name="modelo"/>
+          2
+        </label>
+      </div><br><br>
+      <h3 class="subtitle">
+        Elija un precio aproximado: 
+      </h3>
+      <h4>(min=50M max=250M)</h4><br>
+      <div id="rango">
+        <input type="range" name="costo" list="tickmarks" class="slider is-fullwidth is-danger">
+        <datalist id="tickmarks">
+          <option value="0" label="50M"></option>
+          <option value="25" label="100M"></option>
+          <option value="50" label="150M"></option>
+          <option value="75" label="200M"></option>
+          <option value="100" label="250M"></option>
+        </datalist>
 
+      </div>
+    </div><br><br>
 <!-- Botones -->
 
  <button class="btn waves-effect waves-light btn-large" type="submit" name="submit">Registrar

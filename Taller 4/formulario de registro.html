@@ -109,21 +109,20 @@
     <i class="material-icons prefix" id="incorrect5">cancel</i>
     <i class="material-icons prefix cancel" id="b5">check_circle</i>
     <label for="password">Contraseña</label>
-    <h6 id="m8">La contraseña debe tener de 10 a 20 caracteres, mayúsculas, minúsculas, números y un caracter especial [#,/,&]</h6>
   </div> 
 
 <!-- Verificación contraseña -->
 
   <div id="grupo_confirmar_contraseña" class="input-field col s6">
     <i class="material-icons prefix">keyboard</i>
-    <input id="password2" type="password" name="password2" class="validate" onblur="verificar_pass()"
+    <input id="passwordv" type="password" name="password2" class="validate" onblur="verificar_pass()"
             onkeyup="verificar_pass()">
     <i class="material-icons prefix" id="incorrect6">cancel</i>
     <i class="material-icons prefix cancel" id="b6">check_circle</i>
-    <label for="password2">Confirmar Contraseña</label>
-    <h6 id="m9">Las contraseñas no coinciden</h6>
+    <label for="password">Confirmar Contraseña</label>
+    <h6 id="m8">Las contraseñas no coinciden</h6>
   </div> 
-  
+  <h6 id="h6">debe llenar este campo</h6>
   
 
 <!-- Email -->
@@ -134,7 +133,7 @@
     <i class="material-icons prefix" id="incorrect7">cancel</i>
     <i class="material-icons prefix cancel" id="b7">check_circle</i>
     <label for="email">Email</label>
-    <h6 id="m10">No es un correo válido</h6>
+    <h6 id="m9">No es un correo valido</h6>
     
   </div>
 
@@ -151,25 +150,6 @@
 
  </fieldset>
  <br/>
-
- <h6>  ¿Desea registrar gustos de usuario (relacionado a carros)?</h6>
- <label>
-   <input name="group1" id="no1" type="radio"  onchange="ocultar()" />
-   <span>No</span>
- </label>
-<p>
- <label>
-   <input name="group1" id="si1" type="radio" onchange="mostrar()" />
-   <span>Sí</span>
- </label>
-</p>
-
-
-
- <fieldset class=fieldset id="f1">
-  <div class="progress">
-      <div class="determinate" style="width: 70%"></div>
-  </div>
 <!--Gustos-->
      <div class="control">
         <h3 class="subtitle">Registro de gustos (opcional)</h3>
@@ -177,121 +157,126 @@
         <b>Color</b><br>
         <label class="radio">
           <input type="radio" name="color"/>
-          <span>Blanco</span>
+          Blanco
         </label>
         <label class="radio">
           <input type="radio" name="color"/>
-          <span>Negro</span>
+          Negro
         </label>
         <label class="radio">
           <input type="radio" name="color"/>
-          <span>Plata</span>
+          Plata
         </label>
         <label class="radio">
           <input type="radio" name="color"/>
-          <span>Azul</span>
+          Azul
         </label>
         <label class="radio">
           <input type="radio" name="color"/>
-          <span>Rojo</span>
+          Rojo
         </label>
         <label class="radio">
           <input type="radio" name="color"/>
-          <span>Verde</span>
+          Verde
         </label>
         <label class="radio">
           <input type="radio" name="color"/>
-          <span>Amarillo</span>
+          Amarillo
         </label>
         <label class="radio">
           <input type="radio" name="color"/>
-          <span>Marrón/Beige</span>
+          Marron/Beige
         </label>      
       </div>  <br>
       <div id="marca">
         <b>Marca</b><br>
         <label class="radio">
           <input type="radio" name="marca"/>
-          <span>Chevrolet</span>
+          Chevrolet
         </label>
         <label class="radio">
           <input type="radio" name="marca"/>
-          <span>Susuki</span>
+          Susuki
         </label>
         <label class="radio">
           <input type="radio" name="marca"/>
-          <span>Kia</span>
+          Kia
         </label>
         <label class="radio">
           <input type="radio" name="marca"/>
-          <span>Renault</span>
+          Renault
         </label>
       </div><br>
       <div id="estilo">
         <b>Estilo</b><br>
         <label class="radio">
           <input type="radio" name="estilo"/>
-          <span>Cupe</span>
+          Cupe
         </label>
         <label class="radio">
           <input type="radio" name="estilo"/>
-          <span>Hatchback</span>
+          Hatchback
         </label>
         <label class="radio">
           <input type="radio" name="estilo"/>
-          <span>Descapotable</span>
+          Descapotable
         </label>
         <label class="radio">
           <input type="radio" name="estilo"/>
-          <span>Roadster</span>
+          Roadster
         </label>
         <label class="radio">
           <input type="radio" name="estilo"/>
-          <span>Todoterreno</span>
+          Todoterreno
         </label>
         <label class="radio">
           <input type="radio" name="estilo"/>
-          <span>Familiar</span>
+          Familiar
         </label>
       </div><br>
       <div id="modelo">
         <b>Modelo</b><br>
         <label class="radio">
           <input type="radio" name="modelo"/>
-          <span>Onix</span>
+          Onix
         </label>
         <label class="radio">
           <input type="radio" name="modelo"/>
-          <span>Duster</span>
+          Duster
         </label>
         <label class="radio">
           <input type="radio" name="modelo"/>
-          <span>Stepway</span>
+          Stepway
         </label>
         <label class="radio">
           <input type="radio" name="modelo"/>
-          <span>Picanto</span>
+          Picanto
         </label>
         <label class="radio">
           <input type="radio" name="modelo"/>
-          <span>CX-30</span>
+          CX-30
         </label>
-      </div>
-      <h6 class="subtitle">
-        Elija un precio aproximado: <br>
-        (min=50M max=250M)
-      </h6> 
-  <form action="#">
-    <p class="range-field">
-      <input type="range" id="test5" min="50" max="250" />
-    </p>
-  </form>
+        <label class="radio">
+          <input type="radio" name="modelo"/>
+          2
+        </label>
+      </div><br><br>
+      <h3 class="subtitle">
+        Elija un precio aproximado: 
+      </h3>
+      <h4>(min=50M max=250M)</h4><br>
+      <div id="rango">
+        <input type="range" name="costo" list="tickmarks" class="slider is-fullwidth is-danger">
+        <datalist id="tickmarks">
+          <option value="0" label="50M"></option>
+          <option value="25" label="100M"></option>
+          <option value="50" label="150M"></option>
+          <option value="75" label="200M"></option>
+          <option value="100" label="250M"></option>
+        </datalist>
 
       </div>
     </div><br><br>
-  </fieldset>
-
-  <br/>
 <!-- Botones -->
 
  <button class="btn waves-effect waves-light btn-large" type="submit" name="submit">Registrar

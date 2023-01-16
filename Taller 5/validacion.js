@@ -5,9 +5,10 @@ const message = document.querySelectorAll("#form h6");
 
 //Se utilizan algunas expresiones regulares para verificar los campos
 const expresiones = {
-    direccion: /^(cll|cra|av|anv|trans)/, // Comienza con cll, cra, av, anv o trans
-    ccusuario: /^\d{10,20}$/, // El número de identificación debe tener entre 10 a 20 caracteres y no contener caracteres extraños (solo números)
+    usuario: /^[a-zA-Z0-9]{5,12}$/, // El usuario debe tener entre 5 a 12 caracteres solo número y letras
     icon: /^(b|incorrect)/,
+    contraseña:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#&])[A-Za-z\d@$!#%*?&]{10,20}$/,
+    email:/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
     message:  /^m/
 }
 
@@ -17,18 +18,23 @@ const campos = {
     apellido: false,
     password: false,
     email: false,
-    ccusuario: false,
+    usuario: false,
+    vusuario: false,
 }
-const fechaNacimiento = document.getElementById("fecha");
+const fechaNacimiento = document.getElementById("fechan");
 const edad = document.getElementById("edad");
 
+
+
+ // Calcular la edad a partir de la fecha de nacimiento
 const calcularEdad = (fechaNacimiento) => {
     const fechaActual = new Date();
     const anoActual = parseInt(fechaActual.getFullYear());
     const mesActual = parseInt(fechaActual.getMonth()) + 1;
     const diaActual = parseInt(fechaActual.getDate());
 
-    // 2016-07-11
+    // Formato de fecha 2018-07-11 ("yyyy-mm-dd")
+    
     const anoNacimiento = parseInt(String(fechaNacimiento).substring(0, 4));
     const mesNacimiento = parseInt(String(fechaNacimiento).substring(5, 7));
     const diaNacimiento = parseInt(String(fechaNacimiento).substring(8, 10));
@@ -109,39 +115,24 @@ const validarFormulario = (e) => {
                 campos.apellido = false;
             }
         break;
-        case "direccion":
-            const direccion = document.getElementById('direccion');
-            const direccionV = direccion.value.trim();
-            if(expresiones.direccion.test(direccionV) ){
-                document.getElementById("m5").style.display="none";
-                document.getElementById("b3").style.display="block";
-                document.getElementById("incorrect3").style.display="none";
-            }
-            
-            else{
-                document.getElementById("m5").style.display="block";
-                document.getElementById("b3").style.display="none";
-                document.getElementById("incorrect3").style.display="block";
-            }
-            
-        break;
-        case "CCUsuario":
-            const CCusuario = document.getElementById('CCUsuario');
-            const ccusuarioV = CCusuario.value.trim();
-            if(expresiones.ccusuario.test(ccusuarioV) ){
+
+        case "usuario":
+            const usuario = document.getElementById('usuario');
+            const usuarioV = usuario.value.trim();
+            if(expresiones.usuario.test(usuarioV) ){
                 document.getElementById("m6").style.display="none";
                 document.getElementById("m7").style.display="none";
                 document.getElementById("b4").style.display="block";
                 document.getElementById("incorrect4").style.display="none";
-                campos.ccusuario = true;
+                campos.usuario = true;
             }
 
-            else if(ccusuarioV.length == 0 ){
+            else if(usuarioV.length == 0 ){
                 document.getElementById("m6").style.display="none";
                 document.getElementById("m7").style.display="block";
                 document.getElementById("b4").style.display="none";
                 document.getElementById("incorrect4").style.display="block";
-                campos.ccusuario = false;
+                campos.usuario = false;
             } 
             
             else{
@@ -149,18 +140,87 @@ const validarFormulario = (e) => {
                 document.getElementById("m6").style.display="block";
                 document.getElementById("b4").style.display="none";
                 document.getElementById("incorrect4").style.display="block";
-                campos.ccusuario = false;
+                campos.usuario = false;
             }
         break;
+
+        case "Vusuario": verificar_usuario()
+        break;
  
-        case "password2":
-            validarCampo(expresiones.correo, e.target, 'password2');
+        case "password":
+			const password = document.getElementById('password');
+            const passwordV = password.value.trim();
+			if(expresiones.contraseña.test(passwordV) ){
+				document.getElementById("m8").style.display="none";
+				document.getElementById("b5").style.display="block";
+				document.getElementById("incorrect5").style.display="none";
+			}
+			
+			else{
+				document.getElementById("m8").style.display="block";
+				document.getElementById("b5").style.display="none";
+				document.getElementById("incorrect5").style.display="block";
+			}
+		break;
+        case "password2": verificar_pass()
         break;
         case "email":
-            validarCampo(expresiones.correo, e.target, 'email');
+            const email = document.getElementById('email');
+            const emailV = email.value.trim();
+        if(expresiones.email.test(emailV) ){
+            document.getElementById("m10").style.display="none";
+            document.getElementById("b7").style.display="block";
+            document.getElementById("incorrect7").style.display="none";
+        }
+        
+        else{
+            document.getElementById("m10").style.display="block";
+            document.getElementById("b7").style.display="none";
+            document.getElementById("incorrect7").style.display="block";
+        };
+
         break;
         
     }
+}
+
+function verificar_pass()
+{
+   var c1 = document.getElementById('password').value
+   var c2 = document.getElementById('password2').value
+
+   if (c1 == c2){
+	   document.getElementById("m9").style.display="none";
+	   document.getElementById("b6").style.display="block";
+	   document.getElementById("incorrect6").style.display="none";
+	   campos.password = true;
+
+   } else {
+	   document.getElementById("m9").style.display="block";
+	   document.getElementById("b6").style.display="none";
+	   document.getElementById("incorrect6").style.display="block";
+	   campos.password = false;
+   }
+}
+
+
+function verificar_usuario()
+{
+   var u1 = document.getElementById('usuario').value
+   var u2 = document.getElementById('Vusuario').value
+
+   if (u1 == u2){
+	   document.getElementById("m11").style.display="none";
+	   document.getElementById("b41").style.display="block";
+	   document.getElementById("incorrect41").style.display="none";
+	   campos.vusuario = true;
+
+   } else {
+	   document.getElementById("m11").style.display="block";
+	   document.getElementById("b41").style.display="none";
+	   document.getElementById("incorrect41").style.display="block";
+	   campos.vusuario = false;
+   }
 }
 
 inputs.forEach((input) => {

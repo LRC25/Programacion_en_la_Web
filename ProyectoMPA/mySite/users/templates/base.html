@@ -1,0 +1,31 @@
+{% load  static  %}
+<!DOCTYPE html>
+<html  lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css"> 
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="style3.css" type="text/css" rel="stylesheet">
+<link href="{% static "css/style2.css" %}" type="text/css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    
+  <nav>
+    <div class="nav-wrapper blue">
+      <a class="brand-logo center">PROYECTO PROGRAMACIÓN EN LA WEB</a>
+      <ul class="left hide-on-med-and-down">
+      </ul>
+    </div>
+  </nav>
+  
+  <nav>
+    <div class="nav-wrapper purple">
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href={% url 'inicio' %} ><h5>Inicio</h5></a></li>
+        <li><a href={% url 'usuarios' %}><h5>Usuarios</h5></a></li>
+        <li><a href={% url 'tipo_documento' %}><h5>Tipo de documento</h5></a></li>
+        <li><a href={% url 'ciudades' %}><h5>Ciudad</h5></a></li>
+      </ul>
+    </div>
+  </nav>
+  {% block content %}  {% endblock content  %}

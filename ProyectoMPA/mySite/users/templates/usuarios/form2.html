@@ -1,0 +1,154 @@
+{% load static %}
+
+
+  <!DOCTYPE html>
+  <html  lang="es">
+  <head>
+ 
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css"> 
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="{% static "css/style2.css" %}" type="text/css" rel="stylesheet">
+  <title>Registro de Usuario</title>
+  </head>
+  
+  <body>
+    <section class="formulario"> 
+      <h4> <i class="medium material-icons">account_box</i> Registro de Usuario</h4>
+      <form id="formulario" method="post">
+      
+      <fieldset class=fieldset>
+          <div class="progress">
+              <div class="determinate" style="width: 70%"></div>
+          </div>
+      <legend><h3> Datos personales</h3></legend>
+
+      <!-- Nombre -->
+      
+      <div class="input-field col s6">
+          <h6> <i class="small material-icons left">keyboard</i>{{ campo.label}}</h6>Nombres
+         <input id="nombre" name="nombres"  type="text"  class="validate" required />
+         <span class="helper-text" data-error="wrong" data-success="right">{{ campo.errors}} </span>
+   
+         
+      </div>
+
+
+          
+      <div class="input-field col s6">
+        <h6> <i class="small material-icons left">keyboard</i>{{ campo.label}}</h6>Apellidos
+       <input id="nombre" name="apellidos"  type="text"  class="validate" required />
+       <span class="helper-text" data-error="wrong" data-success="right">{{ campo.errors}} </span>
+ 
+       
+    </div>
+
+
+              
+    <div class="input-field col s6">
+      <h6> <i class="small material-icons left">keyboard</i>{{ campo.label}}</h6>Idtipodocumento
+     <input id="nombre" name="idtipodocumento"  type="select"  class="validate" required />
+     <span class="helper-text" data-error="wrong" data-success="right">{{ campo.errors}} </span>
+
+     
+  </div>
+            
+  <div class="input-field col s6">
+    <h6> <i class="small material-icons left">keyboard</i>{{ campo.label}}</h6>Documento
+   <input id="nombre" name="documento"  type="number"  class="validate" required />
+   <span class="helper-text" data-error="wrong" data-success="right">{{ campo.errors}} </span>
+
+   
+</div>
+
+<div class="input-field col s6">
+  <h6> <i class="small material-icons left">keyboard</i>Residencia</h6>
+ <input id="nombre" name="lugarresidencia"  type="select"  class="validate" required />
+ <span class="helper-text" data-error="wrong" data-success="right">{{ campo.errors}} </span>
+
+ 
+</div>
+
+<div class="input-field col s6">
+  <h6> <i class="small material-icons left">keyboard</i>Fecha nacimiento</h6>
+ <input id="nombre" name="fechanacimiento"  type="text"  class="validate" required />
+ <span class="helper-text" data-error="wrong" data-success="right">{{ campo.errors}} </span>
+
+ 
+</div>
+
+
+
+<div class="input-field col s6">
+  <h6> <i class="small material-icons left">keyboard</i>Email</h6>
+ <input id="nombre" name="email"  type="email"  class="validate" required />
+ <span class="helper-text" data-error="wrong" data-success="right">{{ campo.errors}} </span>
+
+ 
+</div>
+
+            
+<div class="input-field col s6">
+  <h6> <i class="small material-icons left">keyboard</i>Teléfono</h6>
+ <input id="nombre" name="telefono"  type="number"  class="validate" required />
+ <span class="helper-text" data-error="wrong" data-success="right">{{ campo.errors}} </span>
+
+ 
+</div>
+    </div>
+
+
+    
+<div class="input-field col s6">
+  <h6> <i class="small material-icons left">keyboard</i>usuario</h6>
+ <input id="nombre" name="usuario"  type="text"  class="validate" required />
+ <span class="helper-text" data-error="wrong" data-success="right">{{ campo.errors}} </span>
+
+ 
+</div>
+
+<div class="input-field col s6">
+  <h6> <i class="small material-icons left">keyboard</i>Password</h6>
+ <input id="nombre" name="password"  type="text"  class="validate" required />
+ <span class="helper-text" data-error="wrong" data-success="right">{{ password.errors}} </span>
+
+ 
+</div>
+ 
+ 
+  
+  
+   </fieldset>
+   <br/>
+  
+  <!-- Botones -->
+  
+   <button class="btn waves-effect waves-light btn-large" type="submit" name="submit">Registrar
+      <i class="material-icons right">send</i>
+    </button>
+  
+    <button class="btn waves-effect waves-light btn-large" type="reset" name="limpiar">Borrar
+      <i class="material-icons right">remove_circle</i>
+    </button>
+  
+  </form>
+  </section>
+  <!-- Compiled and minified JavaScript -->
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>      
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>  
+
+
+  <script type="text/javascript">
+      $(document).ready(function(){
+          $('select').formSelect();
+          
+      });
+      $(document).ready(function(){
+        $('#fechan').datepicker({format:'yyyy-mm-dd'});
+      });
+    
+    </script>
+  
+  </body>
+  </html>

@@ -1,0 +1,43 @@
+{% load static %}
+<!-- Formulario -->
+<section class="formulario"> 
+  
+
+    <form id="formulario" method="post">
+
+      <fieldset class=fieldset>
+        <div class="progress">
+            <div class="determinate" style="width: 70%"></div>
+        </div>
+    <legend><h3> Datos personales</h3></legend>
+      {% csrf_token %}
+      {% for campo in formulario%}
+    <!-- Nombre -->
+    
+    
+    <div class="input-field col s6">
+        <h6> <i class="small material-icons left">keyboard</i>{{ campo.label}}</h6>
+       <input id="nombre" name="{{ campo.name}}"  type="{{ campo.field.widget.input_type}}"  class="validate" required placeholder="{{ campo.label}}"/>
+       <span class="helper-text" data-error="wrong" data-success="right">{{ campo.errors}} </span>
+ 
+       
+    </div>
+  
+
+      
+    {% endfor%}
+
+    
+    
+<!-- Botones -->
+
+ <button class="btn waves-effect waves-light btn-large" type="submit" name="submit">Registrar
+    <i class="material-icons right">send</i>
+  </button>
+
+  <button class="btn waves-effect waves-light btn-large" type="reset" name="limpiar">Borrar
+    <i class="material-icons right">remove_circle</i>
+  </button>
+
+</form>
+</section>

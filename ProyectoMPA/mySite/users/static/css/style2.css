@@ -1,0 +1,96 @@
+/* Estilo formulario */
+* {
+  margin: 0px;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+.formulario {
+  width: 590px;
+  background: 
+  #0a4e62;
+  padding: 33px;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 60px;
+  border-radius: 8px;
+  font-family: "calibri";
+  color:white;
+}
+
+.formulario h4 {
+  font-size: 40px;
+  margin-top: 5px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.formulario h3 {
+  font-size: 32px;
+  margin-bottom: 2px;
+  text-align: center;
+  color: white;
+}
+
+.formulario h2 { 
+    font-size: 18px;   
+}
+
+body {
+  background: #a3eede;
+  background: -webkit-linear-gradient(to top,#5728d7, #a3eede, );
+  background: linear-gradient(to top, #5728d7, #a3eede);
+}
+
+.fieldset{
+  border-radius: 8px;
+  font-family: "calibri";
+  color:white;
+  margin:10px ;
+}
+.fieldset.datepicker{
+  border-radius: 8px;
+  font-family: "calibri";
+  color:black;
+  margin:10px ;
+}
+
+/* Iconos que indican que se completó de manera incorrecta el campo */
+#incorrect1, #incorrect2, #incorrect41, #incorrect4, #incorrect5, #incorrect6, #incorrect7, #incorrect8 {
+color: red;
+display: none;
+margin-left: 450px;
+}
+
+/* Iconos que indican que se completó de manera correcta el campo */
+
+#b1, #b2, #b3, #b4, #b5, #b6, #b7, #b8, #b41 { 
+color: #00ff6a;
+margin-left: 450px;
+display: none;
+}
+
+/* Mensajes de error */
+#m1, #m2, #m3, #m4, #m5, #m6, #m7,#m8, #m9, #m10, #m41, #m11, #m12{
+color: rgb(255, 0, 0);
+position: relative;
+display: none;
+}
+
+.sm-form-control{
+color: #00ff6a;
+}
+
+
+
+/* Cambiar colores del calendario */
+.modal {
+background-color: #a3eede;
+text-emphasis-color: black;
+}
+
+.datepicker-modal{
+color: black;
+
+}

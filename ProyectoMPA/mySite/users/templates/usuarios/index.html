@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% block content %} 
+<div class="row">
+    
+      <div class="card">
+
+  
+
+          <table class="highlight" id="table">
+            <h4><i class="small material-icons left">fingerprint</i>Usuarios</h4>
+            <thead>
+            
+            <tr>
+              <th>ID</th>
+              <th>Nombres</th>
+              <th>Apellidos</th>
+              <th>Iddocumento</th>
+              <th>Documento</th>
+              <th>Residencia</th>
+              <th>Fecha nacimiento</th>
+              <th>Email</th>
+              <th>Teléfono</th>
+              <th>Usuario</th>
+              <th>Password</th>
+              <th>Acciones</th>
+            </thead>
+
+            <tbody>
+              {% for usuario in usuarios%}
+              <tr>
+                <th>{{ usuario.id}}</th>
+                <th>{{ usuario.nombres}}</th>
+                <th>{{ usuario.apellidos}}</th>
+                <th>{{ usuario.idtipodocumento}}</th>
+                <th>{{ usuario.documento}}</th>
+                <th>{{ usuario.lugarresidencia}}</th>
+                <th>{{ usuario.fechanacimiento}}</th>
+                <th>{{ usuario.email}}</th>
+                <th>{{ usuario.telefono}}</th>
+                <th>{{ usuario.usuario}}</th>
+                <th>{{ usuario.password}}</th>
+                <th><a class="btn waves-effect waves-light btn-large green" type="submit" name="submit" id="k"  href="{% url 'editaru' usuario.id %}" >Editar <i class="material-icons right">edit</i></a> <a class="btn waves-effect waves-light btn-large red" type="submit" name="submit" id="k"  href="{% url 'eliminaru' usuario.id  %}" >Eliminar <i class="material-icons right">delete</i></a></th>
+                {%  endfor %}
+              </tr>
+            </tbody>
+             
+
+
+        
+      </div>
+
+    
+  </div>
+  <br/>
+  <a class="btn waves-effect waves-light btn-large" type="submit" name="submit" id="k"  href="{% url 'crearu' %}" >Agregar Usuario <i class="material-icons right">add</i></a>
+
+
+
+  
+ {% endblock content  %}         

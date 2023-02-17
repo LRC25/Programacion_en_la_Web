@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block content %} 
+<div class="row">
+    <div class="col s12 m6">
+      <div class="card">
+
+        <div class="card-content">
+
+          <table class="highlight" id="table">
+            <h4><i class="small material-icons left">fingerprint</i>Ciudad</h4>
+            <thead>
+            
+            <tr>
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Descripción</th>
+              <th>Acciones</th>
+            </thead>
+
+            <tbody>
+              {% for ciudad in ciudades%}
+              <tr>
+                <th>{{ ciudad.id}}</th>
+                <th>{{ ciudad.nombre}}</th>
+                <th>{{ ciudad.descripcion}}</th>
+                <th><a class="btn waves-effect waves-light btn-large green" type="submit" name="submit" id="k"  href="{% url 'editarc' ciudad.id %}" >Editar <i class="material-icons right">edit</i></a> <a class="btn waves-effect waves-light btn-large red" type="submit" name="submit" id="k"  href="{% url 'eliminarc' ciudad.id  %}" >Eliminar <i class="material-icons right">delete</i></a></th>
+                {%  endfor %}
+              </tr>
+            </tbody>
+             
+
+
+        </div>
+        
+      </div>
+    </div>
+    
+  </div>
+  <br/>
+  <a class="btn waves-effect waves-light btn-large" type="submit" name="submit" id="k"  href="{% url 'crearc' %}" >Agregar Ciudad <i class="material-icons right">add</i></a>
+
+
+
+  
+ {% endblock content  %}         

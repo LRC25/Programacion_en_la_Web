@@ -1,0 +1,136 @@
+{% load static %}
+
+
+  <!DOCTYPE html>
+  <html  lang="es">
+  <head>
+ 
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css"> 
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="{% static "css/style2.css" %}" type="text/css" rel="stylesheet">
+  <title>Registro de Usuario</title>
+  </head>
+  
+  <body>
+  
+  <!-- Formulario -->
+<section class="formulario"> 
+  <h4> <i class="medium material-icons">account_box</i> Registro de Usuario</h4>
+  <form id="formulario" method="post">
+  
+  <fieldset class=fieldset>
+      <div class="progress">
+          <div class="determinate" style="width: 70%"></div>
+      </div>
+  <legend><h3> Datos personales</h3></legend>
+  
+  {% csrf_token %}
+  {% for campo in formulario%}
+  
+  <!-- Nombre -->
+  
+  <div class="input-field col s6" id="g">
+     
+      <i class="material-icons prefix">account_circle</i>
+      
+      <input id="nombre" type="text" name="nombre" class="validate" required value="{{ nombres.value}}"/>
+     <label for="nombre">Nombres </label>
+     <h6 id="m1">Debe llenar este campo</h6>  <!-- m1 Message 1 -->
+     <h6 id="m2">El nombre no debe superar los 25 caracteres</h6> <!-- m2 Message 2 -->
+  </div>
+  
+  
+  <!-- Apellido  -->
+  
+  <div class="input-field col s6">
+    <i class="material-icons prefix">account_circle</i>
+    <input id="apellido" type="text" name="apellido" class="validate" required>
+    <i class="material-icons prefix" id="incorrect2">cancel</i>  <!-- b1 bien 1 (Icono) -->
+    <i class="material-icons prefix cancel" id="b2">check_circle</i>
+    <label for="apellido">Apellido</label>
+    <h6 id="m3">Debe llenar este campo</h6>
+    <h6 id="m4">El apellido no debe superar los 25 caracteres</h6>
+  </div>
+  
+  <!-- Fecha de nacimiento -->
+  
+  <div class="input-field col s6">
+    <i id="fecha" class="material-icons prefix">date_range</i> 
+    <input id="fechan" name="fechan" class="datepicker" type="text" style="color:black;" >
+  
+    <label for="fecha">Fecha de nacimiento</label>
+  </div>
+  
+
+  
+  
+  <!-- Email -->
+  
+  <div class="input-field col s6">
+      <i class="material-icons prefix">contact_mail</i>
+      <input id="email" type="text" name="email" class="validate">
+      <label for="email">Email</label>
+      <h6 id="m10">No es un correo válido</h6>
+    </div>
+  
+  
+  
+  <!-- Usuario -->
+    <div class="input-field col s6">
+      <i class="material-icons prefix">fingerprint</i>
+      <input id="usuario" type="text" name="usuario" class="validate" required>
+
+      <label for="usuario">CCUsuario</label>
+      <h6 id="m6">El usuario debe tener entre 5 a 12 caracteres y ser solo número o solo letras o solo letras y números</h6>
+      <h6 id="m7">Llene este campo</h6>
+    </div>
+    
+
+  
+  <!-- Contraseña -->
+  
+    <div class="input-field col s6">
+      <i class="material-icons prefix">keyboard</i>
+      <input id="password" type="password" name="password" class="validate">
+      <label for="password">Contraseña</label>
+      <h6 id="m8">La contraseña debe tener de 10 a 20 caracteres, mayúsculas, minúsculas, números y un caracter especial [#,/,&]</h6>
+      
+  
+    </div> 
+  
+  
+   </fieldset>
+   <br/>
+  
+  <!-- Botones -->
+  
+   <button class="btn waves-effect waves-light btn-large" type="submit" name="submit">Registrar
+      <i class="material-icons right">send</i>
+    </button>
+  
+    <button class="btn waves-effect waves-light btn-large" type="reset" name="limpiar">Borrar
+      <i class="material-icons right">remove_circle</i>
+    </button>
+  
+  </form>
+  </section>
+  <!-- Compiled and minified JavaScript -->
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>      
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>  
+  <script src="{% static "java/validacion.js" %}"></script>  <!-- Documento JavaScript para la validación -->
+
+  <script type="text/javascript">
+      $(document).ready(function(){
+          $('select').formSelect();
+          
+      });
+      $(document).ready(function(){
+        $('#fechan').datepicker({format:'yyyy-mm-dd'});
+      });
+    
+    </script>
+  
+  </body>
+  </html>

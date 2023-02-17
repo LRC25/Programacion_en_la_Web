@@ -24,7 +24,7 @@ class Usuarios(models.Model):
     apellidos = models.CharField(max_length=100)
     idtipodocumento = models.ForeignKey(Tipo_documento, on_delete=models.CASCADE)
     documento = models.IntegerField()
-    lugarresidencia = models.ForeignKey(Ciudades, on_delete=models.CASCADE) #Asumí que esto era la llave foranea de ciudad?
+    lugarresidencia = models.ForeignKey(Ciudades, on_delete=models.CASCADE) 
     fechanacimiento = models.DateTimeField()
     email = models.EmailField(max_length=254)
     telefono = models.IntegerField()
